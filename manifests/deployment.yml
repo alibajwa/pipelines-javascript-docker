@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: alibajwapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alibajwapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: alibajwapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: alibajwapipelinesjavascriptdocker 
+          image: ahb1containerreg.azurecr.io/alibajwapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
